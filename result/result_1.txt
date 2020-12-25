@@ -1,0 +1,11 @@
+Database Count: 3000 images
+Template: Eucledian Distance algorithm
+Tree: Wavelet Tree
+
+Metrics:
+Correct Matches= 2855
+Total Entries= 3000
+Hit Percentage= 95.1667%
+Error Percentage= 4.83333%
+Construction Time of tree = 698888 microseconds
+Search Time of fingerprint = 5 microseconds

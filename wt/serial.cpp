@@ -3,6 +3,7 @@
 #define ll long long
 using namespace std;
 
+// the node is a building block of wavelet tree
 struct node
 {
     vector<ll> element;
@@ -13,8 +14,10 @@ struct node
     ll high;
 };
 
+// builds the tree from node* root
 void construct_tree (vector<ll> arr, node *root, ll low, ll high)
 {
+    // this is leaf node
     if (low==high)
     {
         root->element=arr;
@@ -54,8 +57,10 @@ void construct_tree (vector<ll> arr, node *root, ll low, ll high)
     return;
 }
 
+// search the tree from node* root
 int search_tree (node *root, int val)
 {
+    // leaf node
     if (root->low==root->high)
     {
         if (root->low==val)

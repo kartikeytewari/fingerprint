@@ -6,6 +6,8 @@ int main()
     int n;
     cin >> n;
     map<int,int> count;
+
+    // reads the values
     for (int i=0;i<=n-1;i++)
     {
         int a;
@@ -13,6 +15,7 @@ int main()
         count[a]++;
     }
 
+    // checks the ammount of unique values in the hash table
     int correct=0;
     for (auto it=count.begin();it!=count.end();it++)
     {
@@ -22,6 +25,7 @@ int main()
         }
     }
 
+    // generate metrics
     cout << "Metrics calculated" << endl;
     cout << "-------------------" << endl;
     cout << "Correct Matches= " << correct << endl;

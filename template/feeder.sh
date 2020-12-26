@@ -1,7 +1,9 @@
+# reinitialize the database file 1.txt
 rm ../data/database/1.txt
 touch ../data/database/1.txt
 python -c "print $(ls -l ../data/wrangled |wc -l) - int(1)" > ../data/database/1.txt
 
+# template all files and store them in database
 for ((i=1;i<=$(ls -l ../data/wrangled |wc -l)-1;i++)) do
 echo "Templating file - " $i
 cp ../data/wrangled/$i.wr.txt in.txt

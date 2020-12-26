@@ -7,6 +7,7 @@ int main()
 	cin.tie(0);
 	cout.precision(10);
 
+	// reads values
 	int n;
 	cin >> n;
 	pair<int,int> arr[n];
@@ -15,6 +16,8 @@ int main()
 		cin >> arr[i].first >> arr[i].second;
 	}
 
+	// generate the eucledian distance among two points
+	// then add them in the ans variable
 	int ans=0;
 	for (int i=0;i<=n-1;i++)
 	{

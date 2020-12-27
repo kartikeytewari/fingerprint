@@ -1,7 +1,7 @@
 # reinitialize the database file 1.txt
 rm ../data/database/1.txt
 touch ../data/database/1.txt
-python -c "print $(ls -l ../data/wrangled |wc -l) - int(1)" > ../data/database/1.txt
+ls -l ../data/wrangled | sed /^total/d | wc -l | xargs > ../data/database/1.txt
 
 # template all files and store them in database
 for ((i=1;i<=$(ls -l ../data/wrangled |wc -l)-1;i++)) do

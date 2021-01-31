@@ -15,5 +15,5 @@ rm temp.txt
 
 # make tree and search the value
 echo "Generating the tree and performing search"
-g++ -std=c++17 -Wshadow -Wall -Wno-unused-result -O2 -o serial.out serial.cpp
+g++ -std=c++17 -Wshadow -Wall -Wno-unused-result -O2 -o serial serial.cpp
 ./serial.out < ../data/database/1.txt

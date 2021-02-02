@@ -1,4 +1,4 @@
 # compiles and run the metric generator file
-rm main.out
-g++ -std=c++17 -Wshadow -Wall -Wno-unused-result -O2 -o main main.cpp 
-./main.out < ../data/database/1.txt 
+rm main
+g++-10 -std=c++17 -O2 -Wshadow -Wall -Wno-unused-result -o main main.cpp 
+./main < ../data/database/1.txt 

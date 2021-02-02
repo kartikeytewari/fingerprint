@@ -5,9 +5,9 @@ rm ./data/wrangled/*.wr.txt
 
 # clean all binaries
 echo "Deleting binaries"
-rm ./metric_generator/main.out
-rm ./template/eucledian_distance.out
-rm ./wt/serial.out
+rm ./metric_generator/main
+rm ./template/eucledian_distance
+rm ./wt/serial
 
 # regenerate param file
 echo "Regenerating Parameter file"
@@ -16,6 +16,6 @@ touch ./wt/param.txt
 
 # compile all files
 echo "Compiling all binaries"
-g++ -std=c++17 -Wshadow -Wall -Wno-unused-result -O2 -o ./metric_generator/main ./metric_generator/main.cpp
-g++ -std=c++17 -Wshadow -Wall -Wno-unused-result -O2 -o ./template/eucledian_distance ./template/eucledian_distance.cpp
-g++ -std=c++17 -Wshadow -Wall -Wno-unused-result -O2 -o ./wt/serial ./wt/serial.cpp
+g++-10 -std=c++17 -O2 -Wshadow -Wall -Wno-unused-result -o ./metric_generator/main ./metric_generator/main.cpp
+g++-10 -std=c++17 -O2 -Wshadow -Wall -Wno-unused-result -o ./template/eucledian_distance ./template/eucledian_distance.cpp
+g++-10 -std=c++17 -O2 -Wshadow -Wall -Wno-unused-result -o ./wt/serial ./wt/serial.cpp

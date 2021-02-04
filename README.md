@@ -16,5 +16,12 @@ This project intends to index fingerprint minutiae by passing them through templ
 - GCC GNU-C compiler
 - Bash
 - Git
+- Make
+
+## Steps to run the programme:
+- Populate the data folder in root of project (more on that soon)
+- Build the files using the command: `make`
+- Make the main.sh script executable by: `chmod +x main.sh`
+- Run the programme using: `./main.sh`
 
 Feel free to contact me at <a href="mailto:kartikeya30@gmail.com">kartikeya30@gmail.com</a>.

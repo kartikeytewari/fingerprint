@@ -12,10 +12,6 @@ read var
 
 if [[ $var = y ]]
 then
-    echo "Building the project"
-    ./build.sh 2>/dev/null
-    press_key
-
     echo "Cleaning all data"
     cd data_wrangler
     ./dw_passer.sh 2>/dev/null

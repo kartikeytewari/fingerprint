@@ -210,8 +210,21 @@ zsdoc/data
 /tests/_output/*
 !/tests/_output/.gitkeep
 
+
+
+
+
+
+
+
+# custom rules
 # data files
 data/*
 
 # param files
 wt/param.txt
+
+# binary files
+metric_generator/main
+template/eucledian_distance
+wt/serial

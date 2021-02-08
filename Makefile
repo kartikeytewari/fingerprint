@@ -10,5 +10,10 @@ compile:
 	g++-10 -std=c++17 -O2 -Wshadow -Wall -Wno-unused-result -o ./template/eucledian_distance ./template/eucledian_distance.cpp
 	g++-10 -std=c++17 -O2 -Wshadow -Wall -Wno-unused-result -o ./wt/serial ./wt/serial.cpp
 
+clean:
+	rm ./metric_generator/main
+	rm ./template/eucledian_distance
+	rm ./wt/serial 
+
 run:
 	./main.sh

@@ -1,3 +1,7 @@
+/* Author: Kartikey Tewari
+ E-mail: kartikeya30@gmail.com */
+
+
 #include <bits/stdc++.h>
 using namespace std;
 

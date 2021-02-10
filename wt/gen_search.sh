@@ -1,3 +1,7 @@
+# Author: Kartikey Tewari
+# E-mail: kartikeya30@gmail.com
+
+
 # regerate param file
 echo "Regenerating Param File"
 rm param.txt

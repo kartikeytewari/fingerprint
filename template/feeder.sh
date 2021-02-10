@@ -1,3 +1,7 @@
+# Author: Kartikey Tewari
+# E-mail: kartikeya30@gmail.com
+
+
 # reinitialize the database file 1.txt
 rm ../data/database/1.txt
 touch ../data/database/1.txt

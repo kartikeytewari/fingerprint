@@ -1,3 +1,7 @@
+# Author: Kartikey Tewari
+# E-mail: kartikeya30@gmail.com
+
+
 # The script runs through all the files in the ../data/raw folder.
 # For each file it caluculates the number of lines in the template.
 # Since each line represents a minutae coordinates this is the number

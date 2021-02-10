@@ -1,3 +1,6 @@
+# Author: Kartikey Tewari
+# E-mail: kartikeya30@gmail.com
+
 #!/usr/local/bin/zsh
 function press_key()
 {

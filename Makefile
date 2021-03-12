@@ -14,7 +14,13 @@ clean:
 	rm ./wt/serial >/dev/null 2>/dev/null || true
 
 build:
-	# regenerate the param file and the binary of all codes
+	# make scripts executable
+	chmod +x ./main.sh
+	chmod +x ./data_wrangler/dw_passer.sh
+	chmod +x ./metric_generator/metric_generator.sh
+	chmod +x ./template/feeder.sh
+	chmod +x ./wt/gen_search.sh
+	# regeberate the param file and the binary of all codes
 	touch ./wt/param.txt
 	g++-10 -std=c++17 -O2 -o ./metric_generator/main ./metric_generator/main.cpp
 	g++-10 -std=c++17 -O2 -o ./template/eucledian_distance ./template/eucledian_distance.cpp
@@ -23,3 +29,4 @@ build:
 run:
 	# run the main script
 	./main.sh
+

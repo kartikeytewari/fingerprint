@@ -10,6 +10,7 @@ clean:
 	rm ./wt/param.txt >/dev/null 2>/dev/null || true
 	# delete all binaries
 	rm ./metric_generator/main >/dev/null 2>/dev/null || true
+	rm ./template/in.txt >/dev/null 2>/dev/null || true
 	rm ./template/eucledian_distance >/dev/null 2>/dev/null || true
 	rm ./wt/serial >/dev/null 2>/dev/null || true
 

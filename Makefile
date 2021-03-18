@@ -13,16 +13,17 @@ clean:
 	rm ./template/in.txt >/dev/null 2>/dev/null || true
 	rm ./template/eucledian_distance >/dev/null 2>/dev/null || true
 	rm ./wt/serial >/dev/null 2>/dev/null || true
+	rm temp.txt >/dev/null 2>/dev/null || true
 
 build:
 	# reinitialize the database file 1.txt
 	rm ./data/database/1.txt >/dev/null 2>/dev/null || true
 	touch ./data/database/1.txt >/dev/null 2>/dev/null || true
 	bash -c "ls -l ./data/raw | sed /^total/d | wc -l | xargs > ./data/database/1.txt"
-	# make scripts executable
+	# make script executable and regerate param file
 	chmod +x ./main.sh
-	# regenerate the param file and the binary of all codes
 	touch ./wt/param.txt
+	# compile
 	g++-10 -std=c++17 -O2 -o ./metric_generator/main ./metric_generator/main.cpp
 	g++-10 -std=c++17 -O2 -o ./template/eucledian_distance ./template/eucledian_distance.cpp
 	g++-10 -std=c++17 -O2 -o ./wt/serial ./wt/serial.cpp

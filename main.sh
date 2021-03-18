@@ -15,24 +15,31 @@ read var
 
 if [[ $var = y ]]
 then
-    echo "Cleaning all data"
-    cd data_wrangler
-    ./dw_passer.sh 2>/dev/null
-    press_key
-
-    echo "Passing data through template"
-    cd ../template
-    ./feeder.sh 2>/dev/null
+    for ((i=1;i<=$(ls -l ./data/raw |wc -l)-1;i++)) do
+    echo "Processing file - " $i
+    echo $(wc -l ./data/raw/$i.txt | awk '{ print $1 }') > ./data/wrangled/$i.wr.txt
+    cat ./data/raw/$i.txt >> ./data/wrangled/$i.wr.txt
+    ./template/eucledian_distance < ./data/wrangled/$i.wr.txt >> ./data/database/1.txt
+    done
     press_key
 
     echo "Generating metrics"
-    cd ../metric_generator
-    ./metric_generator.sh 2>/dev/null
+    ./metric_generator/main < ./data/database/1.txt
     press_key
 
     echo "Building and searching on Wavelet tree"
-    cd ../wt
-    ./gen_search.sh 2>/dev/null
+    # clean the data
+    echo "Cleaning the data"
+    echo $(wc -l ./data/auth_candidate/file.txt | awk '{ print $1 }') > temp.txt
+    cat ./data/auth_candidate/file.txt >> temp.txt
+
+    # pass the data through the template
+    echo "Passing the data through the template"
+    ./template/eucledian_distance < temp.txt > param.txt
+
+    # make tree and search the value
+    echo "Generating the tree and performing search"
+    ./wt/serial < ./data/database/1.txt
     cd ..
 else
     echo "Process terminated."

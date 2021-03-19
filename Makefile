@@ -1,13 +1,15 @@
+.SILENT:
 default:
 	make clean
 	make build
 	make run
 
 clean:
+	echo "🧹 Cleaning previous datasets"
 	# delete all files used in creation of database
 	rm ./data/database/1.txt >/dev/null 2>/dev/null || true
 	rm ./data/wrangled/*.wr.txt >/dev/null 2>/dev/null || true
-	rm ./wt/param.txt >/dev/null 2>/dev/null || true
+	rm ./param.txt >/dev/null 2>/dev/null || true
 	# delete all binaries
 	rm ./metric_generator/main >/dev/null 2>/dev/null || true
 	rm ./template/in.txt >/dev/null 2>/dev/null || true
@@ -16,6 +18,7 @@ clean:
 	rm temp.txt >/dev/null 2>/dev/null || true
 
 build:
+	echo "🏗  Building project"
 	# reinitialize the database file 1.txt
 	rm ./data/database/1.txt >/dev/null 2>/dev/null || true
 	touch ./data/database/1.txt >/dev/null 2>/dev/null || true

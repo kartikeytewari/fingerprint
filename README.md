@@ -32,7 +32,7 @@ Dependencies such as GNU C++ compiler, python3, make and bash will be used.
 - Configure the `data` folder using the following commands:
     `mkdir data data/auth_candidate data/database data/raw data/wrangled`
 - In the `./data/auth_candidate` folder make a file named `file.txt` containing the x and y coordinates of minutiae of the fingerprint that needs to be searched.
-- In the raw.txt folder make a single file for each fingerprint in the database. The files should be named serially for example `1.txt`, `2.txt`, `3.txt` and `4.txt`. Each file should contain x and y coordinates of minutiae points of the fingerprint.
+- In the `./data/raw` folder make a single file for each fingerprint in the database. The files should be named serially for example `1.txt`, `2.txt`, `3.txt` and `4.txt`. Each file should contain x and y coordinates of minutiae points of the fingerprint.
 - To run the software, go to root of project and run: `make`.
 
 Feel free to contact me at <a href="mailto:kartikeya30@gmail.com">kartikeya30@gmail.com</a>.

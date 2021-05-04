@@ -1,7 +1,3 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/c++,python,zsh
-# Edit at https://www.toptal.com/developers/gitignore?templates=c++,python,zsh
-
 ### C++ ###
 # Prerequisites
 *.d
@@ -210,22 +206,17 @@ zsdoc/data
 /tests/_output/*
 !/tests/_output/.gitkeep
 
-
-
-
-
-
-
-
 # custom rules
 # data files
 data/*
-
-# param files
-wt/param.txt
 
 # binary files
 metric_generator/main
 template/eucledian_distance
 wt/serial
+param.txt
 
+# intermediatery files
+wt/param.txt
+template/in.txt
+temp.txt

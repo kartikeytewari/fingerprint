@@ -1,11 +1,18 @@
+#! /usr/local/bin/zsh
+
 # Author: Kartikey Tewari
 # E-mail: kartikeya30@gmail.com
 
-#!/usr/local/bin/zsh
+
 function press_key()
 {
     echo "Press key to continue....";
-    read alpha;
+    read -r alpha;
+    if [[ $alpha !=  y ]]
+    then
+        echo "aborting";
+        exit;
+    fi
 }
 
 function process_file()

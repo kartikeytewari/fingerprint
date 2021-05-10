@@ -27,9 +27,9 @@ build:
 	chmod +x ./main.sh
 	touch ./wt/param.txt
 	# compile
-	g++-10 -std=c++17 -O2 -o ./metric_generator/main ./metric_generator/main.cpp
-	g++-10 -std=c++17 -O2 -o ./template/eucledian_distance ./template/eucledian_distance.cpp
-	g++-10 -std=c++17 -O2 -o ./wt/serial ./wt/serial.cpp
+	g++-11 -std=c++17 -O2 -o ./metric_generator/main ./metric_generator/main.cpp
+	g++-11 -std=c++17 -O2 -o ./template/eucledian_distance ./template/eucledian_distance.cpp
+	g++-11 -std=c++17 -O2 -o ./wt/serial ./wt/serial.cpp
 
 run:
 	# run the main script

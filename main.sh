@@ -8,11 +8,11 @@ function press_key()
 {
     echo "Press key to continue....";
     read -r alpha;
-    if [[ $alpha !=  y ]]
-    then
-        echo "aborting";
-        exit;
-    fi
+    #if [[ $alpha !=  y ]]
+    #then
+    #    echo "aborting";
+    #    exit;
+    #fi
 }
 
 function process_file()
